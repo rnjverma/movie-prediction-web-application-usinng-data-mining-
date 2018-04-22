@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>body{background-color:teal;}</style>
+<meta charset="UTF-8">
+<script type="text/javascript">
+window.onload = function() {
+
+var options = {
+	exportEnabled: true,
+	animationEnabled: true,
+	title:{
+		text: "Movie precdiction analysis for first week"
+	},
+	legend:{
+		horizontalAlign: "right",
+		verticalAlign: "center"
+	},
+	data: [{
+		type: "pie",
+		showInLegend: true,
+		toolTipContent: "<b>{name}</b>: ${y} (#percent%)",
+		indexLabel: "{name}",
+		legendText: "{name} (#percent%)",
+		indexLabelPlacement: "inside",
+		dataPoints: [
+			{ y: 6566.4, name: "Action" },
+			{ y: 2599.2, name: "Comedy+action" },
+			{ y: 1631.2, name: "Thriller" },
+			{ y: 1368, name: "Romantic" },
+			{ y: 1684, name: "Drama"},
+			{ y: 1231.2, name: "Horror" }
+		]
+	}]
+};
+$("#chartContainer").CanvasJSChart(options);
+
+}
+</script>
+
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>  
+<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+</body>
+</html>
+
